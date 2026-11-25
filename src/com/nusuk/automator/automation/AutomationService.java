@@ -95,7 +95,7 @@ public class AutomationService extends AccessibilityService {
     private long lastRestoreKick = 0;
     // After a reinstall / "Clear data" the phone has forgotten which codes it already tried.
     // Never type one until the phone's history is back from the server.
-    private static final long RESTORE_WAIT_MS = 1;
+    private static final long RESTORE_WAIT_MS = 60_000;
     // The red error line from the PREVIOUS code can still be on screen after a new submit.
     // An error only counts for the current code if it wasn't there at submit time, or it
     // went away and came back.
